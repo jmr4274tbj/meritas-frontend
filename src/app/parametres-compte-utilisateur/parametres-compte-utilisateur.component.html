@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <a [routerLink]="'/accueil'">Se déconnecter</a>
+
+    <div class="card text-white bg-primary mb-3" style="max-width: 30rem;">
+        <div class="card-header bg-dark">MODIFIER VOTRE PROFIL</div>
+        <div class="card-body bg-primary">
+            <h3>Numéro d'employé : <b>{{noEmploye}}</b></h3>
+            <h3>Role : <b>{{role}}</b></h3>
+
+            <form [formGroup]="modifierProfilForm">
+                <div class="form-group">
+                  <label>Entrez le nouveau mot de passe désiré :</label>
+                  <input type="password" class="form-control" formControlName="motDePasse" placeholder="Entrez le mot de passe" (change)="surChangementTexteChamp()">
+                  <div id="messageMotDePasse" *ngIf="modifierProfilForm.controls['motDePasse'].invalid && (modifierProfilForm.controls['motDePasse'].dirty || modifierProfilForm.controls['motDePasse'].touched)" class="alert alert-danger">
+                    <div *ngIf="modifierProfilForm.controls['motDePasse'].errors?.required"> 
+                      Le mot de passe est requis.
+                    </div>
+                  </div>
+                  <br>
+                  <div id="messageDonneesManquantes" class="text-center" *ngIf="informationsManquantes"> 
+                    Vous devez entrer un mot de passe!
+                  </div>
+                  <button class="btn text-white" (click)="modifierMotDePasse()" type="button">Soumettre</button>  
+                </div>
+              </form>  
+        </div>
+    </div>
+</div>

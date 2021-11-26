@@ -1,0 +1,15 @@
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Sigle</th>
+      <th scope="col">Nom Matière</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let cours of listeCours">
+      <td>{{ cours.sigle}}</td>
+      <td>{{ cours.nomMatiere }}</td>
+    </tr>
+    </tbody>
+  </table>

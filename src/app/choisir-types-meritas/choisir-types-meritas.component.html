@@ -1,0 +1,19 @@
+
+<table class="table table-striped text-center">
+    <thead>
+    <tr>
+      <th scope="col">Raison</th>
+      <th scope="col">Actif ou inactif</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let raisonActif of listeRaisons">
+      <td>{{ raisonActif.raison }}</td>
+      <td><input type="checkbox" [checked]="raisonActif.actif" (change)="surChangementEtat(raisonActif.raison, raisonActif.actif, $event)"></td>
+    </tr>
+    </tbody>
+  </table>
+  <div id="message" class="text-center" *ngIf="afficherMessage"> 
+    Vous devez choisir au maximum 3 types de méritas!
+  </div>
+  

@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <app-nouveau-etudiant></app-nouveau-etudiant>
+
+    <div class="card text-white bg-primary mb-3" style="max-width: 30rem;">
+        <div class="card-header bg-dark">SUPPRIMER ÉTUDIANT</div>
+        <div class="card-body bg-primary">            
+
+            <form [formGroup]="etudiantSupprimeForm">
+                <div class="form-group">
+                  <label>Entrez le code permanent de l'étudiant :</label>
+                  <input type="text" class="form-control" formControlName="codePermanent" placeholder="Entrez le code permanent de l'étudiant" pattern="[A-Z]{4}[0-9]{8}">
+                  <div id="messageNumMatricule" *ngIf="etudiantSupprimeForm.controls['codePermanent'].invalid" class="alert alert-danger">
+                    <div *ngIf="etudiantSupprimeForm.controls['codePermanent'].errors?.required"> 
+                      Le code permanent est requis.
+                    </div>
+                    <div *ngIf="etudiantSupprimeForm.controls['codePermanent'].errors?.pattern"> 
+                      Le code permanent n'est pas au bon format.
+                    </div>
+                  </div>
+                  <div *ngIf="!CPvalide" class="alert alert-danger">
+                    L'étudiant entré n'existe pas.
+                  </div>
+                  <br>
+                  <button class="btn text-white" (click)="supprimerEtudiant()" type="button">Soumettre</button>  
+                </div>
+              </form>  
+        </div>
+    </div>
+</div>
+

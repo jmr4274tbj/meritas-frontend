@@ -1,0 +1,53 @@
+p {
+    text-align: justify;
+    color: white;
+    font-family: Poppins-Regular;
+}
+
+form {
+    color: white;
+    font-size: larger;
+}
+
+button {
+    float: right;
+}
+
+div.container {
+    background-color: gray;
+    margin-bottom: 226px;
+}
+
+input {
+    border: 2px solid black;
+}
+
+label {
+    font-family: Poppins-Bold;
+    font-size: 20px;
+    margin-top: 10px;
+    color: black;
+}
+
+#messageUtilisateur, #messageMotDePasse {
+    background-color: gray;
+    font-size: 15px;
+    border: none;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#messageDonneesInvalides, #messageDonneesManquantes {
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+

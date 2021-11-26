@@ -1,0 +1,103 @@
+div.container-fluid {
+    background-color: gray;
+    margin-bottom: 280px;
+}
+
+div.card {
+    border: 2px solid black;
+    margin: 0 auto; 
+    float: none; 
+}
+
+div.card-header {
+    font-family: Poppins-Bold;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: Poppins-Bold;
+    font-size: 20px;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-family: Poppins-Regular;
+}
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+  
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+  
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+form {
+    color: white;
+    font-size: larger;
+}
+
+button {
+    width:40%;
+    margin-left:30%;
+    margin-right:30%;
+    background-color:#0056b3;
+}
+
+button:hover {
+    background-color: #003e80;
+}
+
+input {
+    border: 2px solid black;
+    width:94%;
+    margin-left:3%;
+    margin-right:3%;
+}
+
+label {
+    font-family: Poppins-Bold;
+    font-size: 20px;
+    width:94%;
+    margin-left:3%;
+    margin-right:3%;
+}
+
+#messageNumMatricule{
+    background-color: #007bff;
+    font-size: 15px;
+    border: none;
+    font-style: italic;
+    font-weight: bold;
+}
+
+b {
+    font-family: Poppins-Bold;
+    font-size: 20px;
+    margin-top: 10px;
+    color: black;
+}
+
+#messageDonneesManquantes {
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}

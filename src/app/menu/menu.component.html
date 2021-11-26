@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <h3>Bonjour {{noEmploye}}</h3>
+    <a [routerLink]="'/accueil'">Se déconnecter</a>
+
+    <div class="card text-white bg-primary mb-3" style="max-width: 30rem;">
+        <div class="card-header bg-dark">MENU</div>
+        <div class="card-body bg-primary">
+            <div class="col-md-12 text-center">
+                <button (click)="modifierProfil()" type="button" class="btn btn-primary btn-lg">Modifier votre profil</button><br>
+                <button (click)="importer()" type="button" class="btn btn-primary btn-lg">Importer des données</button><br>
+                <button type="button" class="btn btn-primary btn-lg">Exporter des données</button><br>
+                <button (click)="ajouterOuRendreInactifEtudiants()" type="button" class="btn btn-primary btn-lg">Ajouter ou rendre inactif étudiants</button><br>
+                <button (click)="afficherGroupesCours()" type="button" class="btn btn-primary btn-lg">Assignation des méritas</button><br>
+                <button (click)="choisirMeritas()" type="button" class="btn btn-primary btn-lg">Choisir les types de méritas</button><br>
+                <button type="button" class="btn btn-primary btn-lg">Statistiques</button><br>
+            </div>
+        </div>
+    </div>
+</div>

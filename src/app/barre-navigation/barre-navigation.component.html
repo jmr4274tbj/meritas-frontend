@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+      <div class="mx-auto order-0">
+        <a class="navbar-brand mx-auto" href="#">
+          <div class="container">
+            <div class="row" id="logo">
+              <div class="col-sm">
+                <img src="{{team_rocket_logo}}" width="80" height="60" class="d-inline-block align-top" alt="">
+              </div>
+              <div class="col-sm">
+                &nbsp;Team<br>Rocket
+              </div>
+            </div>
+          </div> 
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse w-25 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="'/accueil'">Accueil <span class="sr-only">(current)</span></a>
+          </li>
+          <span class="espace"></span>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link {{lienActif}}" [routerLink]="'/menu'">Menu</a>
+          </li>
+          <span class="espace"></span>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="'/a-propos'">À propos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+
+<script>
+$(".nav .nav-link").on("click", function(){
+   $(".nav").find(".active").removeClass("active");
+   $(this).addClass("active");
+});
+</script>

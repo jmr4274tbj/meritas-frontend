@@ -1,0 +1,51 @@
+<div class="container">
+  <hr style="height:30pt; visibility:hidden;"/>  
+  <div class="row">
+    <div class="col-sm">
+      <img src="{{ecole}}" class="rounded float-left">
+    </div>
+    <div class="col-sm">
+      <p>
+        Cette application vous permet de mieux gérer l’attribution des méritas des élèves. Les secrétaires peuvent entrer l’information sur les élèves et les enseignants,
+        les professeurs peuvent accéder à une liste de leurs élèves et leur attribuer des méritas et finalement les directeurs peuvent regarder les statistiques sur le sujet.
+      </p>
+      <br>
+      <p>Veuillez entrer vos informations pour vous connecter.</p>
+      <br>
+      <form [formGroup]="accueilForm">
+        <div class="form-group">
+          <label>Nom d'utilisateur</label>
+          <input type="text" class="form-control" formControlName="utilisateur" placeholder="Entrez le nom d'utilisateur" (change)="surChangementTexteChamp()">
+          <div id="messageUtilisateur" *ngIf="accueilForm.controls['utilisateur'].invalid && (accueilForm.controls['utilisateur'].dirty || accueilForm.controls['utilisateur'].touched)" class="alert alert-danger">
+            <div *ngIf="accueilForm.controls['utilisateur'].errors?.required"> 
+              Le nom d'utilisateur est requis.
+            </div>
+          </div>
+          <label>Mot de passe</label>
+          <input type="password" class="form-control" formControlName="motDePasse" placeholder="Entrez le mot de passe" (change)="surChangementTexteChamp()">
+          <div id="messageMotDePasse" *ngIf="accueilForm.controls['motDePasse'].invalid && (accueilForm.controls['motDePasse'].dirty || accueilForm.controls['motDePasse'].touched)" class="alert alert-danger">
+            <div *ngIf="accueilForm.controls['motDePasse'].errors?.required"> 
+              Le mot de passe est requis.
+            </div>
+          </div>
+          <br>
+          <button class="btn btn-primary" (click)="afficherMenu()" type="button">Connexion</button>  
+          <div id="messageDonneesInvalides" *ngIf="informationsInvalides"> 
+            Les informations sont invalides!
+          </div>
+          <div id="messageDonneesManquantes" *ngIf="informationsManquantes"> 
+            Les informations sont manquantes!
+          </div>
+        </div>
+      </form>  
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+  

@@ -1,0 +1,17 @@
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col"># Employé</th>
+      <th scope="col">Prénom</th>
+      <th scope="col">Nom</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let professeur of listeProfesseurs">
+      <td>{{ professeur.noEmploye }}</td>
+      <td>{{ professeur.prenom }}</td>
+      <td>{{ professeur.nom }}</td>
+    </tr>
+    </tbody>
+  </table>

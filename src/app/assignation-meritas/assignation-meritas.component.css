@@ -1,0 +1,22 @@
+.espace {
+    padding-right: 65px;
+}
+ 
+h3 {
+    margin-top: 20px;
+    text-align: center;
+} 
+
+div.form-check {
+    background-color: grey;
+    border: grey;
+    margin-bottom: 20px;
+} 
+
+button {
+    width:20%;
+    margin-left:40%;
+    margin-right:40%;
+    margin-top: 25px;
+    margin-bottom: 100px;
+}

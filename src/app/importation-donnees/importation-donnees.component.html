@@ -1,0 +1,84 @@
+<div class="container-fluid">
+
+    <h3>Bonjour {{noEmploye}}</h3>
+    <a [routerLink]="'/accueil'">Se déconnecter</a>
+
+    <div class="card text-white bg-primary mb-3" style="max-width: 50rem;">
+        <div class="card-header bg-dark">IMPORTER DES DONNÉES</div>
+        <div class="card-body bg-primary">
+
+            <form novalidate [formGroup]="importationCoursForm">
+                <div class="input-group mb-3">     
+                    <div class="custom-file">
+                        <input title="Aucun fichier sélectionné" type="file" class="custom-file-input" multiple formControlName="importationFichierCours" id="importationFichierCours" (change)="surChangementFichierCours($any($event).target.files)">
+                        <label class="custom-file-label" data-browse="Parcourir" #importationLabelCours for="importationFichierCours"><i class="fas fa-search"></i> Choisir la liste des cours</label>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn text-white {{etatBoutonImportationCours}}" type="button" (click)="importerCours()">
+                            <div *ngIf="!importationCoursChargement">Importer</div>
+                            <div *ngIf="importationCoursChargement">
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                Importation en cours...
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </form> 
+
+            <form novalidate [formGroup]="importationProfesseursForm">
+                <div class="input-group mb-3">     
+                    <div class="custom-file">
+                        <input title="Aucun fichier sélectionné" type="file" class="custom-file-input" multiple formControlName="importationFichierProfs" id="importationFichierProfs" (change)="surChangementFichierProfesseurs($any($event).target.files)">
+                        <label class="custom-file-label" data-browse="Parcourir" #importationLabelProfesseurs for="importationFichierProfs"><i class="fas fa-search"></i> Choisir la liste des professeurs</label>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn text-white {{etatBoutonImportationProfs}}" type="button" (click)="importerProfesseurs()">
+                            <div *ngIf="!importationProfsChargement">Importer</div>
+                            <div *ngIf="importationProfsChargement">
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                Importation en cours...
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </form> 
+
+            <form novalidate [formGroup]="importationEtudiantsForm">
+                <div class="input-group mb-3">     
+                    <div class="custom-file">
+                        <input title="Aucun fichier sélectionné" type="file" class="custom-file-input" multiple formControlName="importationFichierEtudiants" id="importationFichierEtudiants" (change)="surChangementFichierEtudiants($any($event).target.files)">
+                        <label class="custom-file-label" data-browse="Parcourir" #importationLabelEtudiants for="importationFichierEtudiants"><i class="fas fa-search"></i> Choisir la liste des étudiants</label>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn text-white {{etatBoutonImportationEtudiants}}" type="button" (click)="importerEtudiants()">
+                            <div *ngIf="!importationEtudiantsChargement">Importer</div>
+                            <div *ngIf="importationEtudiantsChargement">
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                Importation en cours...
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </form> 
+
+            <form novalidate [formGroup]="importationGroupesForm">
+                <div class="input-group mb-3">     
+                    <div class="custom-file">
+                        <input title="Aucun fichier sélectionné" type="file" class="custom-file-input" multiple formControlName="importationFichierGroupes" id="importationFichierGroupes" (change)="surChangementFichierGroupes($any($event).target.files)">
+                        <label class="custom-file-label" data-browse="Parcourir" #importationLabelGroupes for="importationFichierGroupes"><i class="fas fa-search"></i> Choisir la liste des groupes</label>
+                    </div>
+                    <div class="form-group">
+                       <button class="btn text-white {{etatBoutonImportationGroupes}}" type="button" (click)="importerGroupes()">
+                        <div *ngIf="!importationGroupesChargement">Importer</div>
+                        <div *ngIf="importationGroupesChargement">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Importation en cours...
+                        </div>
+                    </button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

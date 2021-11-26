@@ -1,0 +1,24 @@
+
+<div *ngIf="afficherMessageAucunGroupeAssocie == false">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Numéro</th>
+      <th scope="col">Année</th>
+      <th scope="col">Sigle</th>
+      <th scope="col">Assigner les méritas de ce groupe</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let groupe of listeGroupesCoursUtilisateur">
+      <td>{{ groupe.numero }}</td>
+      <td>{{ groupe.annee }}</td>
+      <td>{{ groupe.sigle }}</td>
+      <td><button (click)="assignerMeritas(groupe.numeroUnique)" type="button" class="btn btn-primary btn-lg">Assigner</button><br></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="afficherMessageAucunGroupeAssocie">
+  Aucun groupe associé
+</div>

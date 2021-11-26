@@ -1,0 +1,62 @@
+div.container-fluid {
+    background-color: gray;
+    margin-bottom: 314px;
+    align-items: center;
+}
+
+div.card {
+    border: 2px solid black;
+    margin: 0 auto; 
+    float: none; 
+    margin-bottom: 50px;
+}
+
+div.card-header {
+    
+    font-family: Poppins-Bold;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 30px;
+    text-align: center;
+    font-family: Poppins-Bold;
+    color: black;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: Poppins-Regular;
+}
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+  
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+  
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+button {
+    margin-bottom: 20px;
+    width: 380px;
+    background-color:#0056b3;
+}
+
+button:hover {
+    background-color: #003e80;
+}

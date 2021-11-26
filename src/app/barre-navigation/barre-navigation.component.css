@@ -1,0 +1,13 @@
+a.navbar-brand {
+    background-color: red;
+    font-weight: bold;
+}
+
+li.nav-item {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.espace {
+    padding-right: 65px;
+}

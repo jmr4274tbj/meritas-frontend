@@ -1,0 +1,23 @@
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Numéro</th>
+    <th scope="col">Année</th>
+    <th scope="col">Liste</th>
+    <th scope="col">Sigle</th>
+    <th scope="col"># Employé</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let groupe of listeGroupes">
+    <td>{{ groupe.numeroUnique }}</td>
+    <td>{{ groupe.numero }}</td>
+    <td>{{ groupe.annee }}</td>
+    <td>{{ groupe.listeCodePermanent }}</td>
+    <td>{{ groupe.sigle }}</td>
+    <td>{{ groupe.noEmploye }}</td>
+  </tr>
+  </tbody>
+</table>

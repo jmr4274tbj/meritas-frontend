@@ -1,0 +1,41 @@
+
+    <a [routerLink]="'/accueil'">Se déconnecter</a>
+    <div class="card text-white bg-primary mb-3" style="max-width: 30rem;">
+        <div class="card-header bg-dark">AJOUTER UN NOUVEL ÉLÈVE</div>
+        <div class="card-body bg-primary">
+            <form [formGroup]="nouvelEtudiantForm" (ngSubmit)="onSubmit()">
+                <div class="input-group mb-3 text-center">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Code permanent</span>
+                    </div>
+                    <input id="codePermanent" formControlName="codePermanent" pattern="[A-Z]{4}[0-9]{8}">
+                </div>
+                <div class="input-group mb-3 text-center">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Prénom</span>
+                    </div>
+                    <input id="prenom" formControlName="prenom">
+                </div>
+                <div class="input-group mb-3 text-center">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Nom</span>
+                    </div>
+                    <input id="nom" formControlName="nom">
+                </div>
+                <div class="text-center">
+                    <label id="select" for="groupeSelect">Veuillez sélectionner tous les groupe-cours de cet étudiant :</label>
+                    <br>
+                    <select id="groupeSelect" multiple formControlName="groupeChoisi">
+                      <option *ngFor="let groupe of listeGroupes" [value]="groupe.numeroUnique">{{ groupe.sigle }} gr: {{ groupe.numero }} année: {{ groupe.annee }}</option>
+                    </select>
+                    <!-- bloc d'erreur -->
+                    <!--
+                    <div class="invalid-feedback" *ngIf="estSoumis && groupeChoisi.errors?.required!">
+                        <sup>*</sup>Veuillez sélectionner au moins un groupe
+                    </div>-->
+                </div>
+            </form>
+            <button class="btn btn-success"type="submit" (click)="nouveauEtudiant()">Enregistrer</button>
+        </div>
+    </div>
+
