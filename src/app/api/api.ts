@@ -3,9 +3,9 @@ import { Cours, Etudiant, Groupe, Meritas, Professeur, RaisonActif, Utilisateur 
 export class api {
 
     constructor() {
-        //axios.defaults.baseURL = "http://meritas.us-east-2.elasticbeanstalk.com";
+        axios.defaults.baseURL = "http://meritas.us-east-2.elasticbeanstalk.com/";
         //axios.defaults.baseURL = "http://localhost:8081";
-        axios.defaults.baseURL = "https://meritas-app.herokuapp.com";
+        //axios.defaults.baseURL = "https://meritas-app.herokuapp.com";
     }
 
     async obtenirEtudiants(): Promise<Array<Etudiant>> {
